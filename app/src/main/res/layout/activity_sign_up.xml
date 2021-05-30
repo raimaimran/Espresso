@@ -4,34 +4,167 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/signupScreen"
     tools:context=".signUp">
 
     <ImageView
-        android:id="@+id/imageview1"
-        android:layout_width="205dp"
-        android:layout_height="113dp"
-        android:layout_marginTop="176dp"
+        android:id="@+id/buyersigninimage"
+        android:layout_width="180dp"
+        android:layout_height="78dp"
 
-        android:src="@drawable/note"
+        android:layout_marginTop="100dp"
+        android:foregroundGravity="center"
+        android:src="@drawable/user"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/signUp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:padding="10dp"
-        android:text="This is a SignUp Page"
-        android:textColor="@color/zariPurple"
-        android:textSize="25sp"
-        android:textStyle="bold"
+    <EditText
+        android:id="@+id/nameField"
+        android:layout_width="312dp"
+        android:layout_height="55dp"
 
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="56dp"
+        android:backgroundTint="@color/zariPurple"
+        android:gravity="center"
+        android:padding="16dp"
+        android:hint="Name"
+        android:textColor="@color/zariPurple"
+        android:textColorHint="@color/zariPurple"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buyersigninimage" />
+
+    <EditText
+        android:id="@+id/passwordField"
+        android:layout_width="312dp"
+        android:layout_height="55dp"
+
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/zariPurple"
+        android:gravity="center"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:padding="16dp"
+        android:textColor="@color/zariPurple"
+        android:textColorHint="@color/zariPurple"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailField" />
+
+    <EditText
+        android:id="@+id/confirmPasswordField"
+        android:layout_width="312dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="264dp"
+        android:backgroundTint="@color/zariPurple"
+        android:gravity="center"
+        android:hint="Confirm Password"
+        android:inputType="textPassword"
+        android:padding="16dp"
+        android:textColor="@color/zariPurple"
+        android:textColorHint="@color/zariPurple"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buyersigninimage" />
+
+    <EditText
+        android:id="@+id/emailField"
+        android:layout_width="312dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="120dp"
+        android:backgroundTint="@color/zariPurple"
+        android:gravity="center"
+        android:hint="Email"
+        android:padding="16dp"
+        android:textColor="@color/zariPurple"
+        android:textColorHint="@color/zariPurple"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buyersigninimage" />
+
+
+    <Button
+        android:id="@+id/signupButton"
+        android:layout_width="154dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="88dp"
+        android:background="@drawable/roundbtnpurple"
+        android:text="Sign Up"
+        android:textColor="@color/fade_white"
+        android:textColorLink="@color/fade_white"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/imageview1"
-        app:layout_constraintVertical_bias="0.198" />
+        app:layout_constraintTop_toBottomOf="@+id/confirmPasswordField" />
+
+    <TextView
+        android:id="@+id/redirectsignin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Click Here to Sign In"
+        android:textColor="@color/zariPurple"
+        android:textColorLink="@color/zariPurple"
+
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.526"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signupButton" />
+
+    <TextView
+        android:id="@+id/incorrectmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/gender"
+        android:layout_width="312dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="152dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailField">
+
+        <RadioButton
+            android:id="@+id/FemaleButton"
+            android:layout_width="96dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:text="Female"
+            app:layout_constraintEnd_toStartOf="@+id/MaleButton"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <RadioButton
+            android:id="@+id/MaleButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-30dp"
+            android:layout_marginLeft="240dp"
+            android:text="Male"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/FemaleButton" />
+
+    </RadioGroup>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

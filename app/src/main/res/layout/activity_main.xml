@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/fade_white"
+    android:id="@+id/signInScreen"
     tools:context=".MainActivity">
 
     <ImageView
@@ -21,7 +22,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/bsemailid"
+        android:id="@+id/emailField"
         android:layout_width="312dp"
         android:layout_height="55dp"
 
@@ -39,7 +40,7 @@
         app:layout_constraintTop_toBottomOf="@+id/buyersigninimage" />
 
     <EditText
-        android:id="@+id/bspassword"
+        android:id="@+id/passwordField"
         android:layout_width="312dp"
         android:layout_height="55dp"
 
@@ -55,10 +56,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bsemailid" />
+        app:layout_constraintTop_toBottomOf="@+id/emailField" />
 
     <Button
-        android:id="@+id/bssignin"
+        android:id="@+id/signinButton"
         android:layout_width="154dp"
         android:layout_height="54dp"
         android:layout_marginTop="40dp"
@@ -70,7 +71,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bspassword" />
+        app:layout_constraintTop_toBottomOf="@+id/passwordField" />
 
     <TextView
         android:id="@+id/redirectsignup"
@@ -86,7 +87,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.524"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bssignin"
+        app:layout_constraintTop_toBottomOf="@+id/signinButton"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView

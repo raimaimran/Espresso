@@ -29,11 +29,16 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        btn = (Button) findViewById(R.id.bssignin);
+        btn = (Button) findViewById(R.id.signinButton);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                EditText uname = findViewById(R.id.bsemailid);
+                EditText uname = findViewById(R.id.emailField);
+                EditText pass = findViewById(R.id.passwordField);
+                if (uname.getText().toString().isEmpty() && pass.getText().toString().isEmpty() ){
+                    Toast.makeText(getApplicationContext(),"You must enter username and password",Toast.LENGTH_SHORT).show();
+                    return;
+                }
                 if (uname.getText().toString().isEmpty()){
 
                     TextView tv = findViewById(R.id.incorrectmail);
@@ -46,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
                     tv.setText("You must enter a valid email.");
                     return;
                 }
-                EditText pass = findViewById(R.id.bspassword);
+
                 if (pass.getText().toString().isEmpty()){
                     TextView tv = findViewById(R.id.incorrectmail);
                     tv.setText("You must enter your password");
